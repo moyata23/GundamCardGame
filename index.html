@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gundam Card Game – Cyclops Deck Gameplay Map</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121a31;
+      --text: #eaf0ff;
+      --muted: #b8c4e6;
+      --accent: #5eead4;
+      --accent2: #93c5fd;
+      --warn: #fbbf24;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #0a0f1e, #0b1020 30%, #0b1020);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 20px; }
+    .hero {
+      background: linear-gradient(135deg, #1b2a4f, #13203f);
+      border: 1px solid #2a3b6b;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+    h1 { margin: 0 0 8px; font-size: 1.5rem; }
+    h2 { margin: 20px 0 10px; font-size: 1.15rem; color: var(--accent); }
+    h3 { margin: 14px 0 8px; font-size: 1rem; color: var(--accent2); }
+    p, li { color: var(--text); }
+    .muted { color: var(--muted); }
+    .nav {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin: 12px 0 6px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #07111f;
+      background: var(--accent);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #24345f;
+      border-radius: 14px;
+      padding: 14px;
+      margin: 10px 0;
+    }
+    ul { margin: 8px 0 8px 18px; }
+    .badge {
+      display: inline-block;
+      background: #1f2f58;
+      border: 1px solid #31477f;
+      color: #d9e7ff;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .warn {
+      color: #221100;
+      background: var(--warn);
+      border-radius: 8px;
+      padding: 8px 10px;
+      display: inline-block;
+      font-weight: 700;
+    }
+    .footer { margin: 26px 0 8px; color: var(--muted); font-size: 0.9rem; }
+    code { background: #0f1730; border: 1px solid #2a3d70; padding: 1px 6px; border-radius: 6px; color: #c6d7ff; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Gundam Card Game – Cyclops/Zeon Deck Gameplay Map</h1>
+      <p class="muted">Built from your submitted list (GD03/ST03 core). Optimized as a quick in-match reference for mobile.</p>
+      <div class="nav">
+        <a href="#win">Win Condition</a>
+        <a href="#phases">Turn Phases</a>
+        <a href="#roles">Card Roles</a>
+        <a href="#mulligan">Mulligan</a>
+        <a href="#mistakes">Mistakes</a>
+        <a href="#checklist">Checklist</a>
+      </div>
+    </section>
+
+    <section id="win" class="card">
+      <h2>1) Win Condition</h2>
+      <ul>
+        <li>Build a wide board via token generation (<code>GD03-020</code>, <code>GD03-024</code>, <code>GD03-108</code>, <code>ST03-016</code>).</li>
+        <li>Convert token count into tempo/removal with <code>GD03-107</code>.</li>
+        <li>Close with Breach pressure via <code>GD01-092</code> + <code>GD03-090</code>.</li>
+      </ul>
+      <p><span class="badge">Deck identity</span><span class="badge">Snowball Midrange-Aggro</span><span class="badge">Token Tempo</span></p>
+    </section>
+
+    <section id="phases" class="card">
+      <h2>2) Turn-Phase Plan</h2>
+      <h3>Early (Lv1–Lv3): Set engine</h3>
+      <ul>
+        <li>Deploy 2+ bodies quickly.</li>
+        <li>Start loading trash with Cyclops pieces.</li>
+        <li>Prefer lines that preserve future token scaling.</li>
+      </ul>
+
+      <h3>Mid (Lv3–Lv5): Explode tempo</h3>
+      <ul>
+        <li>Turn on <code>GD03-020</code> condition (4+ Cyclops in trash) for Ad Balloon burst turns.</li>
+        <li>Use <code>GD03-107</code> at high token count (don’t low-roll it).</li>
+        <li>Use <code>GD03-017</code> lines to pick active AP≤5 targets and crack stabilizers.</li>
+      </ul>
+
+      <h3>Late (Lv5+): Breach closeout</h3>
+      <ul>
+        <li>Sequence removal first, Breach second.</li>
+        <li>Use <code>Mikhail</code> Breach grant on best attacker for lethal math.</li>
+        <li>Keep at least one follow-up wave; don’t dump entire board into one answer.</li>
+      </ul>
+    </section>
+
+    <section id="roles" class="card">
+      <h2>3) Card Role Map</h2>
+      <p><span class="badge">Engine</span> GD03-020, GD03-024, GD03-108, ST03-016</p>
+      <p><span class="badge">Pressure Bodies</span> ST03-008, GD03-027, GD01-031</p>
+      <p><span class="badge">Combat Control</span> GD03-017, GD01-032</p>
+      <p><span class="badge">Finish Pressure</span> GD01-092, GD03-090</p>
+      <p><span class="badge">Scalable Removal</span> GD03-107</p>
+    </section>
+
+    <section id="mulligan" class="card">
+      <h2>4) Mulligan Map</h2>
+      <h3>Keep</h3>
+      <ul>
+        <li>2+ early deployables</li>
+        <li>1 token enabler</li>
+        <li>smooth early-to-mid curve</li>
+      </ul>
+      <h3>Ship</h3>
+      <ul>
+        <li>command-heavy no-board hands</li>
+        <li>payoff-only hands with no setup</li>
+      </ul>
+      <p class="warn">Rule: board first, payoff second.</p>
+    </section>
+
+    <section id="mistakes" class="card">
+      <h2>5) Common EV Leaks (Avoid)</h2>
+      <ul>
+        <li>Firing <code>GD03-107</code> too early for low impact.</li>
+        <li>Trading tokens away without tempo/value gain.</li>
+        <li>Ignoring trash count setup for <code>GD03-020</code> turns.</li>
+        <li>Forcing Breach before clearing blockers.</li>
+        <li>Overextending into one board reset.</li>
+      </ul>
+    </section>
+
+    <section id="checklist" class="card">
+      <h2>6) End-of-Turn Checklist</h2>
+      <ol>
+        <li>Did I increase token count or threaten it next turn?</li>
+        <li>Can I convert tokens into removal tempo next turn?</li>
+        <li>Do I have a 1–2 turn Breach closeout line?</li>
+      </ol>
+      <p class="muted">If #2 + #3 are both yes, pivot hard into closeout mode.</p>
+    </section>
+
+    <p class="footer">Prepared for Masaki • Generated by OpenClaw assistant • Updated: 2026-02-11</p>
+  </div>
+</body>
+</html>
