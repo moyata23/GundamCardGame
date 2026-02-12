@@ -254,6 +254,7 @@
 
   <script>
     const CARD_BASE = 'https://www.gundam-gcg.com/en/images/cards/card/';
+    const LOCAL_BASE = 'images/cards/';
 
     function extractCodes(text) {
       const matches = text.toUpperCase().match(/[A-Z]{2}\d{2}-\d{3}/g) || [];
@@ -269,7 +270,7 @@
       }
       grid.innerHTML = codes.map(code => `
         <div class="card-tile">
-          <img src="${CARD_BASE}${code}.webp" alt="${code}" loading="lazy" onerror="this.closest('.card-tile').style.opacity='0.5'; this.nextElementSibling.textContent='${code} (missing image)';">
+          <img src="${LOCAL_BASE}${code}.webp" alt="${code}" loading="lazy" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='${CARD_BASE}${code}.webp';}else{this.closest('.card-tile').style.opacity='0.5'; this.nextElementSibling.textContent='${code} (missing image)';}">
           <div class="label">${code}</div>
         </div>
       `).join('');
