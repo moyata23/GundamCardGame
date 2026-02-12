@@ -77,6 +77,32 @@
     }
     .footer { margin: 26px 0 8px; color: var(--muted); font-size: 0.9rem; }
     code { background: #0f1730; border: 1px solid #2a3d70; padding: 1px 6px; border-radius: 6px; color: #c6d7ff; }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .card-tile {
+      background: #0f1730;
+      border: 1px solid #29407b;
+      border-radius: 10px;
+      padding: 8px;
+      text-align: center;
+    }
+    .card-tile img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #2a3d70;
+      background: #0a1023;
+    }
+    .card-tile .label {
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      word-break: break-word;
+    }
   </style>
 </head>
 <body>
@@ -88,6 +114,7 @@
         <a href="#win">Win Condition</a>
         <a href="#phases">Turn Phases</a>
         <a href="#roles">Card Roles</a>
+        <a href="#cards">Card Images</a>
         <a href="#mulligan">Mulligan</a>
         <a href="#mistakes">Mistakes</a>
         <a href="#checklist">Checklist</a>
@@ -137,8 +164,27 @@
       <p><span class="badge">Scalable Removal</span> GD03-107</p>
     </section>
 
+    <section id="cards" class="card">
+      <h2>4) Key Card Images</h2>
+      <p class="muted">Pulled from the official Gundam Card Game card image CDN for quick visual reference.</p>
+      <div class="card-grid">
+        <div class="card-tile"><img src="images/cards/GD03-020.webp" alt="GD03-020" loading="lazy"><div class="label">GD03-020</div></div>
+        <div class="card-tile"><img src="images/cards/GD03-024.webp" alt="GD03-024" loading="lazy"><div class="label">GD03-024</div></div>
+        <div class="card-tile"><img src="images/cards/GD03-108.webp" alt="GD03-108" loading="lazy"><div class="label">GD03-108</div></div>
+        <div class="card-tile"><img src="images/cards/ST03-016.webp" alt="ST03-016" loading="lazy"><div class="label">ST03-016</div></div>
+        <div class="card-tile"><img src="images/cards/GD03-107.webp" alt="GD03-107" loading="lazy"><div class="label">GD03-107</div></div>
+        <div class="card-tile"><img src="images/cards/GD01-092.webp" alt="GD01-092" loading="lazy"><div class="label">GD01-092</div></div>
+        <div class="card-tile"><img src="images/cards/GD03-090.webp" alt="GD03-090" loading="lazy"><div class="label">GD03-090</div></div>
+        <div class="card-tile"><img src="images/cards/GD03-017.webp" alt="GD03-017" loading="lazy"><div class="label">GD03-017</div></div>
+        <div class="card-tile"><img src="images/cards/ST03-008.webp" alt="ST03-008" loading="lazy"><div class="label">ST03-008</div></div>
+        <div class="card-tile"><img src="images/cards/GD03-027.webp" alt="GD03-027" loading="lazy"><div class="label">GD03-027</div></div>
+        <div class="card-tile"><img src="images/cards/GD01-031.webp" alt="GD01-031" loading="lazy"><div class="label">GD01-031</div></div>
+        <div class="card-tile"><img src="images/cards/GD01-032.webp" alt="GD01-032" loading="lazy"><div class="label">GD01-032</div></div>
+      </div>
+    </section>
+
     <section id="mulligan" class="card">
-      <h2>4) Mulligan Map</h2>
+      <h2>5) Mulligan Map</h2>
       <h3>Keep</h3>
       <ul>
         <li>2+ early deployables</li>
@@ -154,7 +200,7 @@
     </section>
 
     <section id="mistakes" class="card">
-      <h2>5) Common EV Leaks (Avoid)</h2>
+      <h2>6) Common EV Leaks (Avoid)</h2>
       <ul>
         <li>Firing <code>GD03-107</code> too early for low impact.</li>
         <li>Trading tokens away without tempo/value gain.</li>
@@ -165,7 +211,7 @@
     </section>
 
     <section id="checklist" class="card">
-      <h2>6) End-of-Turn Checklist</h2>
+      <h2>7) End-of-Turn Checklist</h2>
       <ol>
         <li>Did I increase token count or threaten it next turn?</li>
         <li>Can I convert tokens into removal tempo next turn?</li>
